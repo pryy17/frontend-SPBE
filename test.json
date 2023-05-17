@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "level 1",
+      "kriteria": "Konsep kebijakan internal terkait Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah belum tersedia atau masih dalam bentuk draft.",
+      "pemenuhan": "Instansi Pusat/Pemerintah Daerah belum atau sudah memiliki konsep kebijakan internal Peta Rencana SPBE dimaksud atau masih dalam proses pengesahan.",
+      "bukti_dukung": "Draf kebijakan berupa rancangan Peraturan atau rancangan Keputusan atau Surat Edaran/dokumen yang berisi pengaturan/norma mengenai Peta Rencana SPBE; Notulensi/catatan/laporan hasil penyusunan kebijakan internal Peta Rencana SPBE; bukti undangan rapat penyusunan kebijakan internal Peta Rencana SPBE; dan/atau dokumentasi aktivitas-aktivitas penyusunan kebijakan internal Peta Rencana SPBE."
+    },
+    {
+      "id": 2,
+      "name": "level 2",
+      "kriteria": "Kebijakan internal Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah telah ditetapkan. Kondisi: Kebijakan internal Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah tersebut belum mengatur muatan Peta Rencana SPBE secara lengkap (Tata Kelola SPBE, Manajemen SPBE, Layanan SPBE, Infrastruktur SPBE, Aplikasi SPBE, Keamanan SPBE, dan Audit TIK).",
+      "pemenuhan": "Instansi Pusat/Pemerintah Daerah sudah memiliki kebijakan internal Peta Rencana SPBE yang telah ditetapkan dan pengaturan Peta Rencana SPBE mencakup sebagian muatan Peta Rencana SPBE.",
+      "bukti_dukung": "Konteks pengaturan/norma penerapan Peta Rencana SPBE yang terdapat sebagian muatan Peta Rencana SPBE tertuang dalam dokumen kebijakan Instansi Pusat/Pemerintah Daerah;"
+    },
+    {
+      "id": 3,
+      "name": "level 3",
+      "kriteria": "Kriteria tingkat 2 telah terpenuhi dan kebijakan internal Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah telah mengatur seluruh muatan Peta Rencana SPBE secara lengkap (Tata Kelola SPBE, Manajemen SPBE, Layanan SPBE, Infrastruktur SPBE, Aplikasi SPBE, Keamanan SPBE, dan Audit TIK).",
+      "pemenuhan": "Instansi Pusat/Pemerintah Daerah telah memiliki kebijakan internal yang mendukung pengaturan Peta Rencana SPBE yang mencakup keseluruhan muatan Peta Rencana SPBE.",
+      "bukti_dukung": "Konteks pengaturan/norma penerapan Peta Rencana SPBE yang memuat secara lengkap muatan Peta Rencana SPBE tertuang dalam dokumen kebijakan Instansi Pusat/Pemerintah Daerah;"
+    },
+    {
+      "id": 4,
+      "name": "level 4",
+      "kriteria": "Kriteria tingkat 3 telah terpenuhi, kebijakan internal Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah telah mengatur keselarasan antara Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah dan Peta Rencana SPBE Nasional. Selain itu, Kebijakan internal Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah telah direviu dan dievaluasi secara periodik.",
+      "pemenuhan": "Instansi Pusat/Pemerintah Daerah sudah memiliki arah kebijakan pengaturan penyusunan Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah selaras dengan Peta Rencana SPBE Nasional.",
+      "bukti_dukung": "1) Konteks pengaturan/norma penerapan Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah selaras dengan Peta Rencana SPBE Nasional tertuang dalam dokumen kebijakan Instansi Pusat/Pemerintah Daerah; dan \n2) Terdapat notulensi/catatan/laporan hasil evaluasi kebijakan internal Peta Rencana SPBE, bukti undangan rapat evaluasi kebijakan internal Peta Rencana SPBE, dan/atau dokumentasi aktivitasaktivitas evaluasi kebijakan internal Peta Rencana SPBE."
+    },
+    {
+      "id": 5,
+      "name": "level 5",
+      "kriteria": "Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi kebijakan internal Peta Rencana Instansi Pusat/Pemerintah Daerah SPBE telah ditindaklanjuti dengan kebijakan baru.",
+      "pemenuhan": "Instansi Pusat/Pemerintah Daerah telah menindaklanjuti hasil reviu dan evaluasi kebijakan Peta Rencana SPBE dengan menetapkan kebijakan baru agar sesuai dengan kebutuhan Instansi Pusat/Pemerintah Daerah ataupun perubahan lingkungan dan teknologi.",
+      "bukti_dukung": "1) Terdapat notulensi/catatan/laporan hasil rekomendasi tindak lanjut kebijakan internal Peta Rencana SPBE, yang dapat dilengkapi dengan bukti undangan rapat pembahasan penyempurnaan kebijakan internal Peta Rencana SPBE, dan/atau dokumentasi aktivitas-aktivitas penyempurnaan kebijakan internal Peta Rencana SPBE; \n2) Dokumen kebijakan Instansi Pusat/Pemerintah Daerah yang berlaku sebelumnya; dan \n3) Dokumen kebijakan Instansi Pusat/Pemerintah Daerah yang memuat pengaturan/norma Peta Rencana SPBE yang telah disempurnakan dan telah ditetapkan."
+    }
+  ]
+}
+
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "level 1",
+      "kriteria": "Konsep kebijakan internal terkait Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah belum tersedia atau masih dalam bentuk draft.",
+      "pemenuhan": "Instansi Pusat/Pemerintah Daerah belum atau sudah memiliki konsep kebijakan internal Peta Rencana SPBE dimaksud atau masih dalam proses pengesahan.",
+      "bukti_dukung": "Draf kebijakan berupa rancangan Peraturan atau rancangan Keputusan atau Surat Edaran/dokumen yang berisi pengaturan/norma mengenai Peta Rencana SPBE; Notulensi/catatan/laporan hasil penyusunan kebijakan internal Peta Rencana SPBE; bukti undangan rapat penyusunan kebijakan internal Peta Rencana SPBE; dan/atau dokumentasi aktivitas-aktivitas penyusunan kebijakan internal Peta Rencana SPBE."
+    },
+    {
+      "id": 2,
+      "name": "level 2",
+      "kriteria": "",
+      "pemenuhan": "",
+      "bukti_dukung": ""
+    },
+    {
+      "id": 3,
+      "name": "level 3",
+      "kriteria": "",
+      "pemenuhan": "",
+      "bukti_dukung": ""
+    },
+    {
+      "id": 4,
+      "name": "level 4",
+      "kriteria": "",
+      "pemenuhan": "",
+      "bukti_dukung": ""
+    },
+    {
+      "id": 5,
+      "name": "level 5",
+      "kriteria": "",
+      "pemenuhan": "",
+      "bukti_dukung": ""
+    }
+  ]
+}
+
