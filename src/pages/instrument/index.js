@@ -29,7 +29,7 @@ export default function instrument() {
               domainTitle={data.attributes.name}
               key={data.id}
               aspeks={data.attributes.aspeks.data}
-              img={`http://localhost:1337${data.attributes.domain_image.data.attributes.url}`}
+              img={data.attributes.domain_image.data.attributes.url}
             />
           ))}
         </div>

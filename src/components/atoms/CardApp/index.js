@@ -21,7 +21,7 @@ export default function CardAPP({ data }) {
                     <div
                       key={index}
                       className=" me-6  w-10 h-10 bg-center bg-cover"
-                      style={{ backgroundImage: `url(${url}${item.img})` }}
+                      style={{ backgroundImage: `url(${item.img})` }}
                     />
                   ))}
                 </div>
@@ -33,7 +33,7 @@ export default function CardAPP({ data }) {
           </div>
           <div className="img_app rotate-[20deg] col-span-7 w-[30em] scale-125 translate-x-10 -translate-y-4  hover:rotate-0 hover:scale-100 hover:translate-x-0 transition hover:duration-[200ms]">
             <img
-              src={`${url}${data?.attributes.banner}`}
+              src={data?.attributes.banner}
               alt="lapor"
               className="bg-cover bg-center"
               style={{ rotate: "initial" }}

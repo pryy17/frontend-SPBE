@@ -38,7 +38,7 @@ export default function detailApp() {
         <div className="relative mb-48">
           <div className="banner_app w-full h-[20em] overflow-hidden relative rounded-md">
             <img
-              src={`${url}${dataDetailApp?.banner}`}
+              src={`${dataDetailApp?.banner}`}
               alt="banner"
               className=" absolute w-full  h-auto left-0"
             />
@@ -46,7 +46,7 @@ export default function detailApp() {
           <div className="absolute top-72 left-16 flex items-center">
             <div
               className=" z-20 logo_app w-48 h-48 overflow-hidden rounded-full shadow-lg shadow-slate-700 bg-cover bg-center"
-              style={{ backgroundImage: `url(${url}${dataDetailApp.logo})` }}
+              style={{ backgroundImage: `url(${dataDetailApp.logo})` }}
             ></div>
             <div className="ms-7">
               <h1 className="text-5xl font-bold font-['Poltawski Nowy']">
@@ -67,7 +67,7 @@ export default function detailApp() {
                 <div
                   className="me-6 w-16 h-16 bg-center bg-cover"
                   key={index}
-                  style={{ backgroundImage: `url(${url}${item.img})` }}
+                  style={{ backgroundImage: `url(${item.img})` }}
                 />
               ))}
             </div>
