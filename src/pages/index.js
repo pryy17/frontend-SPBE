@@ -1,20 +1,21 @@
 import { dataMenu } from "@/data/dataMenu";
 import { CardFlipper, Corousel, Footer, Navbar } from "../components";
+import { data as img } from "@/data/home/dataCorousel";
 
 export default function Home() {
   return (
     <main className="bg-white">
       <Navbar />
-      <Corousel />
+      <Corousel data={img} className="bg-cover w-full h-full bg-no-repeat bg-center" />
       <div className="mt-20 flex">
         <iframe
           width="660"
           height="415"
           src="https://www.youtube.com/embed/-p32jFI00zw"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
           className="aspect-video me-16"
         ></iframe>
 

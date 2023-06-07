@@ -1,6 +1,7 @@
+import Aos from "aos";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactCardFlip from "react-card-flip";
 import { HiOutlineInformationCircle } from "react-icons/hi";
 
@@ -18,17 +19,26 @@ export default function CardFlipper({
     e.preventDefault();
     setFlipper(!flipper);
   };
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+      offset: 300,
+      mirror: true,
+      once: false,
+      anchorPlacement: "top-bottom",
+    });
+  }, []);
 
   if (style == "indicator") {
     return (
-      <div>
+      <div data-aos="fade-up">
         <ReactCardFlip isFlipped={flipper} flipDirection="horizontal">
           <div
-            className="h-[15em] w-[40em] from-[#02bb86] bg-gradient-to-br text-white to-[#367060] flex rounded-md shadow-2xl shadow-slate-600"
+            className="h-[15em] w-[40em] from-[#F90B31] to-[#852f3c] bg-gradient-to-br text-white flex rounded-md shadow-2xl shadow-slate-600"
             onMouseEnter={handleFlip}
           >
             <div className="w-full grid grid-cols-12 place-content-center">
-              <p className=" text-center text-5xl font-bold col-span-4 -rotate-45 -mt-11 -ms-11">
+              <p className=" text-center text-5xl font-bold col-span-4 -rotate-90 -ms-16">
                 Indikator
               </p>
               <p className="ms-14 text-8xl font-bold col-span-8">
@@ -38,10 +48,10 @@ export default function CardFlipper({
           </div>
 
           <div
-            className="h-[15em] w-[40em] bg-[#02bb86] rounded-md text-center grid place-content-center shadow-2xl shadow-slate-600 justify-items-center"
+            className="h-[15em] w-[40em] from-[#F90B31] to-[#DD0525] bg-gradient-to-b rounded-md text-center grid place-content-center shadow-2xl shadow-slate-600 justify-items-center"
             onMouseLeave={handleFlip}
           >
-            <strong>{data?.attributes.title}</strong>
+            <strong className="text-white text-lg">{data?.attributes.title}</strong>
             <Link href={`${asPath}/${data?.id}`}>
               <button className="from-[#efc9a1] mt-3 hover:shadow-none to-green-300 bg-gradient-to-b py-1 px-4 w-fit rounded-full shadow-md shadow-slate-800 cursor-pointer">
                 GO
@@ -55,16 +65,16 @@ export default function CardFlipper({
 
   if (style == "custom") {
     return (
-      <div>
+      <div data-aos="fade-up">
         <ReactCardFlip isFlipped={flipper} flipDirection="horizontal">
           <div
-            className={className}
-            style={{ backgroundImage: `url("${img}")` }}
+            className={`${className} grid grid-cols-2`}
             onMouseEnter={handleFlip}
             onClick={handleFlip}
           >
-            <div className=" backdrop-blur-sm w-full h-full flex items-center justify-center px-7 text-center">
-              <p className="text-black font-bold text-4xl">{title}</p>
+            <div style={{ backgroundImage: `url("${img}")` }} className="w-full h-full bg-cover bg-no-repeat bg-center"></div>
+            <div className=" w-full h-full flex justify-center items-center border-s-2 border-gray-500 me-2 my-2">
+              <p className="text-black font-bold text-3xl ps-3 tracking-wide whitespace-pre-line leading-tight uppercase">{title}</p>
             </div>
           </div>
 

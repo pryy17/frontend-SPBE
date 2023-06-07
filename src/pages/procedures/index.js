@@ -1,7 +1,29 @@
-import { Footer, Modal, Navbar } from "@/components";
-import React from "react";
+import { CardFlipper, Footer, Modal, Navbar } from "@/components";
+import { getProceduresData } from "@/services/api";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 
 export default function procedures() {
+  const [dataProceduresIntern, setDataProceduresIntern] = useState();
+  const [dataProceduresEkstern, setDataProceduresEkstern] = useState();
+
+  useEffect(() => {
+    getProceduresData()
+      .then((res) => {
+        const dataIntern = res.data.data.filter((e) => {
+          return e.attributes.type == "internal";
+        });
+        const dataEkstern = res.data.data.filter((e) => {
+          return e.attributes.type == "eksternal";
+        });
+        console.log(res.data.data);
+        setDataProceduresIntern(dataIntern);
+        setDataProceduresEkstern(dataEkstern);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <div>
       <Navbar />
@@ -23,7 +45,15 @@ export default function procedures() {
               </button>
             }
           >
-            test
+            <div className="grid grid-cols-4 py-5 px-6">
+              {dataProceduresEkstern?.map((item) => (
+                <Link href={`/procedures/${item.id}`} key={item.id}>
+                  <div className="h-40 w-40 text-md font-semibold text-white from-[#777978] to-[#02bb86] bg-gradient-to-b shadow-md shadow-slate-800 text-center rounded-md flex justify-center items-center">
+                    <p>{item.attributes.name}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </Modal>
           <Modal
             title={"test2"}
@@ -33,7 +63,15 @@ export default function procedures() {
               </button>
             }
           >
-            test2
+            <div className="grid grid-cols-4 py-5 px-6">
+              {dataProceduresIntern?.map((item) => (
+                <Link href={`/procedures/${item.id}`} key={item.id}>
+                  <div className="h-40 w-40 text-md font-semibold text-white from-[#777978] to-[#02bb86] bg-gradient-to-b shadow-md shadow-slate-800 text-center rounded-md flex justify-center items-center">
+                    <p>{item.attributes.name}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </Modal>
         </div>
       </div>
