@@ -14,6 +14,7 @@ export default function instrument() {
         console.log(err);
       });
   }, []);
+
   console.log(dataInstrument);
   if (!dataInstrument) {
     return <div>loading...</div>;

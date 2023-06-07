@@ -1,11 +1,13 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { HiSearch } from "react-icons/hi";
-import logo from "../../../../public/logo.png";
+import { useRouter } from "next/router";
+import { data } from "./data";
 
 export default function Navbar() {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const path = useRouter().pathname;
 
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
@@ -39,26 +41,29 @@ export default function Navbar() {
   return (
     <div
       className={`${
-        show ? "shadow-slate-800 shadow-md z-20" : "fixed visible z-20 w-[85em]"
+        show
+          ? "z-20 mb-5 transition duration-300 "
+          : "shadow-slate-800 shadow-lg fixed visible z-20 w-[85em] duration-300 transition-[0.5s]"
       }`}
     >
-      <nav className="flex items-center h-16 px-7 rounded-sm shadow-slate-800 shadow-md bg-white w-full">
+      <nav className="flex items-center h-16 px-7 rounded-sm bg-white w-full">
         <div className="flex w-full">
           <div className="logo flex items-center">
-            <img src='/logo.png' className="w-10 h-10" />
+            <img src="/logo.png" className="w-10 h-10" />
             <p className="ms-2 text-lg text-red-600 font-bold">SPBE</p>
           </div>
-          <div className="navbar-list flex ms-auto items-center">
-            <p className="me-20">
-              <Link href="/">Home</Link>
-            </p>
-            <p className="me-20">
-              <Link href="/instrument">Instrument</Link>
-            </p>
-            <p className="me-20">
-              <Link href="/procedures">Procedures</Link>
-            </p>
-            <p className="me-20">Ethics</p>
+          <div className="navbar-list flex mx-auto items-center">
+            {data.map((item) => (
+              <p
+                key={item.id}
+                className={`me-20 ${
+                  item.path === path &&
+                  "border-b-4 border-red-600 font-bold text-red-500"
+                } `}
+              >
+                <Link href={item.path}>{item.name}</Link>
+              </p>
+            ))}
           </div>
           <div>
             <form>

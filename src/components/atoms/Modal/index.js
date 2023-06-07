@@ -1,7 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
+import PropTypes from "prop-types";
 
-export default function MyModal({ title, children, button }) {
+export default function MyModal({ title, children, button, height, width }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const closeModal = () => {
@@ -41,7 +42,10 @@ export default function MyModal({ title, children, button }) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-[70em] h-[30em] transform overflow-y-scroll rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel
+                  style={{ width: width, maxHeight: height }}
+                  className={`transform overflow-y-scroll rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all`}
+                >
                   <Dialog.Title
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900 border-b-2 pb-5 border-black"
@@ -69,3 +73,11 @@ export default function MyModal({ title, children, button }) {
     </div>
   );
 }
+
+MyModal.defaultProps = {
+  title: "",
+  children: "",
+  button: "test",
+  height: "",
+  width: "60%",
+};

@@ -11,8 +11,8 @@ export default function DisclosureDown({ children, title }) {
           <>
             <Disclosure.Button
               className={`flex w-full justify-between ${
-                open ? "rounded-t-lg bg-[#02bb86]" : "rounded-lg"
-              } bg-[#02bb86] px-4 py-2 text-left text-base font-medium text-white hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75`}
+                open ? "rounded-t-lg bg-[#eb3f5c]" : "rounded-lg bg-[#F90B31]"
+              } px-4 py-2 text-left text-base font-medium text-white hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75`}
             >
               {title}
               <HiChevronDown
@@ -23,7 +23,7 @@ export default function DisclosureDown({ children, title }) {
             </Disclosure.Button>
             <Disclosure.Panel
               style={{ wordBreak: "break-all" }}
-              className="bg-purple-100 overflow-auto px-4 py-6 rounded-b-lg text-left text-base font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
+              className="leading-loose bg-purple-100 overflow-auto px-4 py-6 rounded-b-lg text-left text-base font-medium  text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
             >
               {children}
             </Disclosure.Panel>
