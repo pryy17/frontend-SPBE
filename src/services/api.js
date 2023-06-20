@@ -49,3 +49,9 @@ export const getDetailProcedureData = (id) => {
   );
   return data();
 };
+
+// get provision data
+export const getProvisionData = getWithoutHeader(`${API_URL}/api/ketentuan-umums`);
+
+// get principle data
+export const getPrincipleData = getWithoutHeader(`${API_URL}/api/principles`);
