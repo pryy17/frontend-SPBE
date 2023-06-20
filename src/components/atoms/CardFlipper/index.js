@@ -36,6 +36,7 @@ export default function CardFlipper({
           <div
             className="h-[15em] w-[40em] from-[#F90B31] to-[#852f3c] bg-gradient-to-br text-white flex rounded-md shadow-2xl shadow-slate-600"
             onMouseEnter={handleFlip}
+            onClick={handleFlip}
           >
             <div className="w-full grid grid-cols-12 place-content-center">
               <p className=" text-center text-5xl font-bold col-span-4 -rotate-90 -ms-16">
@@ -50,6 +51,7 @@ export default function CardFlipper({
           <div
             className="h-[15em] w-[40em] from-[#F90B31] to-[#DD0525] bg-gradient-to-b rounded-md text-center grid place-content-center shadow-2xl shadow-slate-600 justify-items-center"
             onMouseLeave={handleFlip}
+            onClick={handleFlip}
           >
             <strong className="text-white text-lg">
               {data?.attributes.title}
