@@ -21,7 +21,7 @@ export const dataMenu = [
     id: 4,
     name: "Informasi etika asesor pemantauan dan evaluasi spbe",
     img: "https://mcdn.wallpapersafari.com/medium/44/75/mTW2OY.jpg",
-    path: "/procedures",
+    path: "/ethics",
   },
   {
     id: 5,

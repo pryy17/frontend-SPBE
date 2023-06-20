@@ -51,7 +51,9 @@ export default function CardFlipper({
             className="h-[15em] w-[40em] from-[#F90B31] to-[#DD0525] bg-gradient-to-b rounded-md text-center grid place-content-center shadow-2xl shadow-slate-600 justify-items-center"
             onMouseLeave={handleFlip}
           >
-            <strong className="text-white text-lg">{data?.attributes.title}</strong>
+            <strong className="text-white text-lg">
+              {data?.attributes.title}
+            </strong>
             <Link href={`${asPath}/${data?.id}`}>
               <button className="from-[#efc9a1] mt-3 hover:shadow-none to-green-300 bg-gradient-to-b py-1 px-4 w-fit rounded-full shadow-md shadow-slate-800 cursor-pointer">
                 GO
@@ -72,9 +74,17 @@ export default function CardFlipper({
             onMouseEnter={handleFlip}
             onClick={handleFlip}
           >
-            <div style={{ backgroundImage: `url("${img}")` }} className="w-full h-full bg-cover bg-no-repeat bg-center"></div>
+            {img ? (
+              <div
+                style={{ backgroundImage: `url("${img}")` }}
+                className="w-full h-full bg-cover bg-no-repeat bg-center"
+              ></div>
+            ) : null}
+
             <div className=" w-full h-full flex justify-center items-center border-s-2 border-gray-500 me-2 my-2">
-              <p className="text-black font-bold text-3xl ps-3 tracking-wide whitespace-pre-line leading-tight uppercase">{title}</p>
+              <p className="text-black font-bold text-3xl ps-3 tracking-wide whitespace-pre-line leading-tight uppercase">
+                {title}
+              </p>
             </div>
           </div>
 
