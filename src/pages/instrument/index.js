@@ -20,11 +20,11 @@ export default function instrument() {
     return <div>loading...</div>;
   }
   return (
-    <div>
+    <div className="min-h-[100vh]">
       <Navbar />
       <br />
       <div className="container_instrument bg-white  py-10">
-        <div className="container_intrument_row px-8 grid grid-cols-2 gap-8">
+        <div className="container_intrument_row px-8 grid sm:grid-cols-2 grid-cols-1 gap-8">
           {dataInstrument?.map((data) => (
             <CardWithTrigger
               domainTitle={data.attributes.name}
