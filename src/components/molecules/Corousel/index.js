@@ -5,7 +5,7 @@ export default function Corousel({ data, ...rest }) {
   console.log(data)
   return (
     <div>
-      <div className="h-96 w-full sm:h-64 xl:h-80 2xl:h-[32rem]">
+      <div className="h-36 w-full sm:h-64 xl:h-80 2xl:h-[32rem]">
         <Carousel className="object-contain" >
           {data?.map((item) => (
             <div

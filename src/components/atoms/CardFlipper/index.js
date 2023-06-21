@@ -72,7 +72,7 @@ export default function CardFlipper({
       <div data-aos="fade-up">
         <ReactCardFlip isFlipped={flipper} flipDirection="horizontal">
           <div
-            className={`${className} grid grid-cols-2`}
+            className={`${className} grid grid-cols-1 sm:grid-cols-2`}
             onMouseEnter={handleFlip}
             onClick={handleFlip}
           >
@@ -83,7 +83,7 @@ export default function CardFlipper({
               ></div>
             ) : null}
 
-            <div className=" w-full h-full flex justify-center items-center border-s-2 border-gray-500 me-2 my-2">
+            <div className=" w-full h-full flex justify-center items-center border-s-2 border-gray-500 me-2 sm:my-2">
               <p className="text-black font-bold text-3xl ps-3 tracking-wide whitespace-pre-line leading-tight uppercase">
                 {title}
               </p>
