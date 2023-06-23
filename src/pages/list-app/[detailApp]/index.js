@@ -59,7 +59,7 @@ export default function detailApp() {
           </div>
         </div>
 
-        <div className="border-t-2 grid w-full grid-cols-2 grid-flow-row gap-2 pt-5">
+        <div className="border-t-2 grid w-full grid-cols-1 sm:grid-cols-2 grid-flow-row gap-2 pt-5">
           <div className="collaboration_app w-full pb-5">
             <h2 className="font-semibold text-xl text-center">kolaborasi</h2>
             <div className="w-full flex justify-center mt-9 ps-8">
@@ -90,8 +90,8 @@ export default function detailApp() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 mt-10">
-          <div className="left_app me-10 ms-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 mt-64 sm:mt-10">
+          <div className="left_app sm:me-10 sm:ms-20">
             <div className="px-5 py-4 bg-[#efc9a1] rounded-lg pb-6 shadow-lg shadow-slate-600">
               <h2 className="text-center font-semibold text-xl mb-6">
                 Overview
@@ -114,7 +114,7 @@ export default function detailApp() {
             </div>
           </div>
 
-          <div className="right_app ms-10 me-20">
+          <div className="right_app sm:ms-10 sm:me-20 mt-5 sm:mt-0">
             <div className="px-5 py-4 bg-[#efc9a1] rounded-lg pb-6 shadow-lg shadow-slate-600">
               <h2 className="text-center font-semibold text-xl mb-6">
                 Dasar Hukum
