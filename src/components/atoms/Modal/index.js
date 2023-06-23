@@ -43,7 +43,7 @@ export default function MyModal({ title, children, button, height, width }) {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel
-                  style={{ width: width, maxHeight: height }}
+                  style={{ minWidth: width, maxHeight: height }}
                   className={`transform overflow-y-scroll rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all`}
                 >
                   <Dialog.Title

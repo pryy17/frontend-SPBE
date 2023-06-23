@@ -23,7 +23,7 @@ export default function listApp() {
       <h1 className="text-4xl font-bold pb-9 border-b-4 border-b-slate-700 mb-4">
         Aplikasi Umum SPBE
       </h1>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {dataApps?.map((item) => (
           <CardApp key={item.id} data={item} />
         ))}

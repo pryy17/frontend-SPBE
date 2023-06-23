@@ -27,10 +27,10 @@ export default function detailProcedures() {
           {data?.title}
         </h1>
         <div className="grid grid-cols-12 w-full gap-8">
-          <div className=" col-span-7 text-lg tracking-wide text-justify">
+          <div className="col-span-12 px-2 sm:px-2 sm:col-span-7 text-lg tracking-wide text-justify">
             <p>{data?.description}</p>
           </div>
-          <div className="col-span-5 w-full">
+          <div className="col-span-12 sm:col-span-5 w-full">
             <div className="mb-1">
               <TransformWrapper initialScale={1}>
                 {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
@@ -73,9 +73,9 @@ export default function detailProcedures() {
             <DisclosureDown key={item.id} title={item.title}>
               <div>
                 <p className="mb-10">{item.description}</p>
-                <div className="flex">
+                <div className="flex-col">
                   {item.example.data?.map((itemExample) => (
-                    <div className="me-5">
+                    <div className="me-5 mt-6 sm:mt-0">
                       <TransformWrapper initialScale={1}>
                         {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
                           <React.Fragment>

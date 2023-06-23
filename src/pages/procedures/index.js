@@ -36,7 +36,7 @@ export default function procedures() {
         >
           TATA CARA DAN KAIDAH PENILAIAN <br /> PEMANTAUAN DAN EVALUASI SPBE
         </h1>
-        <div className="w-1/3 flex justify-between mt-8">
+        <div className=" w-full px-5 sm:w-1/3 flex justify-between mt-8">
           <Modal
             title={"test"}
             button={
@@ -76,7 +76,7 @@ export default function procedures() {
         </div>
       </div>
       <div className="border-t-2 border-gray-400 mt-4 pt-3">
-        <p className="text-lg text-justify tracking-wider ">
+        <p className="text-lg text-justify tracking-wider px-2 sm:px-0 ">
           Untuk menghasilkan standar dan kualitas penilaian pemantauan dan
           evaluasi SPBE, maka perlu disusun tata cara dan kaidah penilaian
           sebagai acuan bagi semua pihak yang berkepentingan dalam pelaksanaan

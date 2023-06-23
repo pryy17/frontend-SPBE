@@ -34,22 +34,22 @@ export default function CardFlipper({
       <div data-aos="fade-up">
         <ReactCardFlip isFlipped={flipper} flipDirection="horizontal">
           <div
-            className="h-[15em] w-[40em] from-[#F90B31] to-[#852f3c] bg-gradient-to-br text-white flex rounded-md shadow-2xl shadow-slate-600"
+            className="w-full h-52 sm:h-[15em] sm:w-[40em] from-[#F90B31] to-[#852f3c] bg-gradient-to-br text-white flex rounded-md shadow-2xl shadow-slate-600"
             onMouseEnter={handleFlip}
             onClick={handleFlip}
           >
             <div className="w-full grid grid-cols-12 place-content-center">
-              <p className=" text-center text-5xl font-bold col-span-4 -rotate-90 -ms-16">
+              <p className=" text-center text-3xl sm:text-5xl font-bold col-span-12 sm:col-span-4 sm:-rotate-90 sm:-ms-16">
                 Indikator
               </p>
-              <p className="ms-14 text-8xl font-bold col-span-8">
+              <p className="sm:ms-14 text-5xl text-center sm:text-8xl font-bold col-span-12 sm:col-span-8">
                 {data?.attributes.ind}
               </p>
             </div>
           </div>
 
           <div
-            className="h-[15em] w-[40em] from-[#F90B31] to-[#DD0525] bg-gradient-to-b rounded-md text-center grid place-content-center shadow-2xl shadow-slate-600 justify-items-center"
+            className="w-full h-52 sm:h-[15em] sm:w-[40em] from-[#F90B31] to-[#DD0525] bg-gradient-to-b rounded-md text-center grid place-content-center shadow-2xl shadow-slate-600 justify-items-center"
             onMouseLeave={handleFlip}
             onClick={handleFlip}
           >
