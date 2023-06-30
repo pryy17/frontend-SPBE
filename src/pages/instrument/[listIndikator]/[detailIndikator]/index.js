@@ -13,6 +13,7 @@ export default function detailIndikator() {
   const [dataLevel, setDataLevel] = useState(null);
   const [title, setTitle] = useState(null);
 
+  console.log(router)
   useEffect(() => {
     if (path.detailIndikator) {
       getDetailIndikatorData(path?.detailIndikator)

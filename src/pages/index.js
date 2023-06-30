@@ -4,28 +4,28 @@ import { data as img } from "@/data/home/dataCorousel";
 
 export default function Home() {
   return (
-    <main className="bg-white md:w-full">
+    <main className="bg-white overflow-hidden">
       <Navbar />
-      <Corousel data={img} className="bg-cover w-full h-full bg-no-repeat bg-center" />
-      <div className="mt-20 md:flex grid grid-cols-1 justify-items-center w-full ">
+      <Corousel data={img} className="bg-contain w-full h-full bg-no-repeat bg-center" />
+      <div className="mt-20 xl:flex grid grid-cols-1 justify-items-center w-full ">
         <iframe
           src="https://www.youtube.com/embed/-p32jFI00zw"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
-          className="aspect-video me-0 sm:me-16 w-full sm:w-[40em] h-[20em] sm:h-[25em]"
+          className="aspect-video me-0 xl:me-16 w-full xl:w-[40em] h-[20em] xl:h-[25em]"
         ></iframe>
 
-        <div className="mt-10 sm:mt-0 border-s-2 ps-3 sm:text-left border-slate-700 text-5xl sm:text-7xl w-fit">
+        <div className="mt-10 xl:mt-0 border-s-2 ps-3 xl:text-left border-slate-700 text-5xl xl:text-7xl w-fit">
           SISTEM <br /> PEMERINTAHAN <br /> BERBASIS <br /> ELEKTRONIK
         </div>
       </div>
       <div>
-        <h1 className="text-center mb-20 mt-20 text-2xl sm:text-5xl">
+        <h1 className="text-center mb-20 mt-20 text-2xl xl:text-5xl">
           Panduan Sistem Pemerintahan Berbasis Elektronik
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 w-full justify-center justify-items-center gap-20">
+        <div className="grid grid-cols-1 xl:grid-cols-2 w-full justify-center justify-items-center gap-20">
           {dataMenu.map((item) => (
             <CardFlipper
               key={item.id}

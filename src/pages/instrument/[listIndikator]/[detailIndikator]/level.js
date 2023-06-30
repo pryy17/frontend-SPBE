@@ -43,31 +43,31 @@ export default function ({ data }) {
                   Contoh Bukti Dukung
                 </strong>
                 {item?.example?.data?.map((item) => (
-                  <div className="mb-6">
+                  <div className="mb-6" key={item.id}>
                     <TransformWrapper initialScale={1}>
                       {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
                         <React.Fragment>
                           <div className="tools absolute z-30">
                             <button
-                              className="px-8 py-1 me-5 from-slate-500 bg-gradient-to-r rounded-md shadow-md shadow-slate-400 to-[#f0d3d3]"
+                              className="px-8 py-1 me-5 opacity-40 hover:opacity-100 from-slate-500 bg-gradient-to-r rounded-md shadow-md shadow-slate-400 to-[#f0d3d3]"
                               onClick={() => zoomIn()}
                             >
                               +
                             </button>
                             <button
-                              className="px-8 py-1 me-5 from-slate-500 bg-gradient-to-r rounded-md shadow-md shadow-slate-400 to-[#f0d3d3]"
+                              className="px-8 py-1 me-5 opacity-40 hover:opacity-100 from-slate-500 bg-gradient-to-r rounded-md shadow-md shadow-slate-400 to-[#f0d3d3]"
                               onClick={() => zoomOut()}
                             >
                               -
                             </button>
                             <button
-                              className="px-8 py-1 me-5 from-slate-500 bg-gradient-to-r rounded-md shadow-md shadow-slate-400 to-[#f0d3d3]"
+                              className="px-8 py-1 me-5 opacity-40 hover:opacity-100 from-slate-500 bg-gradient-to-r rounded-md shadow-md shadow-slate-400 to-[#f0d3d3]"
                               onClick={() => resetTransform()}
                             >
                               reset
                             </button>
                             <button
-                              className="px-8 py-1 me-5 sm:mt-0 mt-3 from-slate-500 bg-gradient-to-r rounded-md shadow-md shadow-slate-400 to-[#f0d3d3]"
+                              className="px-8 py-1 me-5 sm:mt-0 mt-3 opacity-40 hover:opacity-100 from-slate-500 bg-gradient-to-r rounded-md shadow-md shadow-slate-400 to-[#f0d3d3]"
                               onClick={() => resetTransform()}
                             >
                               <a href={item.attributes?.url} target="_blank">open</a>

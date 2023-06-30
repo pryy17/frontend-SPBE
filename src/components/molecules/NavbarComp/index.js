@@ -4,11 +4,14 @@ import { HiSearch } from "react-icons/hi";
 import { useRouter } from "next/router";
 import { data } from "./data";
 import { Navbar } from "flowbite-react";
+import { SearchBar } from "../../atoms";
 
 export default function NavbarComp() {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const path = useRouter().pathname;
+  const router = useRouter();
+  const [valueSearch, setValueSearch] = useState("");
 
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
@@ -28,6 +31,18 @@ export default function NavbarComp() {
       setLastScrollY(window.scrollY);
     }
   };
+  const handleChange = (e) => {
+    const newValueSearch = e.target.value.replace("/", " ");
+    setValueSearch(newValueSearch);
+    console.log(valueSearch);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (valueSearch) {
+      router.push(`/search/${valueSearch.replace("/", " ")}`);
+    }
+  };
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -42,7 +57,7 @@ export default function NavbarComp() {
   return (
     <Navbar
       fluid
-      rounde
+      rounded
       className={`${
         show
           ? "z-20 mb-5 transition duration-300 "
@@ -83,19 +98,7 @@ export default function NavbarComp() {
           </p>
         ))}
         {/* search bar */}
-        <div className="mt-8 sm:mt-0 flex justify-center">
-          <form>
-            <div className="border-2 border-solid w-fit bg-white rounded-full h-10 flex items-center active:border-2 active:border-blue-500  hover:border-2 hover:border-blue-500">
-              <input
-                type="text"
-                className="border-none rounded-full h-9 focus:ring-0"
-              />
-              <button className="bg-gray-400 rounded-full w-9 h-9">
-                <HiSearch className="text-xl text-white ms-2" />
-              </button>
-            </div>
-          </form>
-        </div>
+        <SearchBar handleChange={handleChange} handleSubmit={handleSubmit} />
       </Navbar.Collapse>
     </Navbar>
   );

@@ -75,7 +75,7 @@ export default function detailProcedures() {
                 <p className="mb-10">{item.description}</p>
                 <div className="flex-col">
                   {item.example.data?.map((itemExample) => (
-                    <div className="me-5 mt-6 sm:mt-0">
+                    <div className="me-5 mt-6 sm:mt-6">
                       <TransformWrapper initialScale={1}>
                         {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
                           <React.Fragment>
