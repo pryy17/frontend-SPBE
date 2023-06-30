@@ -23,6 +23,13 @@ export const getDetailIndikatorData = (id) => {
   return data();
 };
 
+export const getSearchIndikatorData = (value) => {
+  const data = getWithoutHeader(
+    `${API_URL}/api/indikators?filters[$or][0][title][$contains]=${value}&filters[$or][1][ind][$contains]=${value}&populate=deep,3`
+  );
+  return data();
+};
+
 export const getIndikatorLevelData = (id) => {
   const data = getWithoutHeader(
     `${API_URL}/api/indikators/${id}?populate[level_component][populate]=*`
@@ -35,6 +42,13 @@ export const getListApps = getWithoutHeader(`${API_URL}/api/applications`);
 
 export const getDetailApp = (id) => {
   const data = getWithoutHeader(`${API_URL}/api/applications/${id}`);
+  return data();
+};
+
+export const getSearchAppData = (value) => {
+  const data = getWithoutHeader(
+    `${API_URL}/api/applications?filters[$or][0][name][$contains]=${value}&filters[$or][1][overview][$contains]=${value}`
+  );
   return data();
 };
 
@@ -51,7 +65,9 @@ export const getDetailProcedureData = (id) => {
 };
 
 // get provision data
-export const getProvisionData = getWithoutHeader(`${API_URL}/api/ketentuan-umums`);
+export const getProvisionData = getWithoutHeader(
+  `${API_URL}/api/ketentuan-umums`
+);
 
 // get principle data
 export const getPrincipleData = getWithoutHeader(`${API_URL}/api/principles`);
