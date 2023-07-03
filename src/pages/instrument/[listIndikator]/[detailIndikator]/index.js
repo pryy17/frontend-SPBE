@@ -5,6 +5,8 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { getDetailIndikatorData, getIndikatorLevelData } from "@/services/api";
 import Level from "./level";
+import loading from "@/assets/loadinggif.gif";
+import Image from "next/image";
 
 export default function detailIndikator() {
   const router = useRouter();
@@ -13,7 +15,7 @@ export default function detailIndikator() {
   const [dataLevel, setDataLevel] = useState(null);
   const [title, setTitle] = useState(null);
 
-  console.log(router)
+  console.log(router);
   useEffect(() => {
     if (path.detailIndikator) {
       getDetailIndikatorData(path?.detailIndikator)
@@ -38,7 +40,18 @@ export default function detailIndikator() {
     }
   }, [path]);
   if (!dataDetailIndikator) {
-    return <div>loading...</div>;
+    return (
+      <div className="flex flex-col h-screen w-full justify-center items-center">
+        <Image
+          src={loading}
+          alt="loader"
+          height={100}
+          width={100}
+          quality={100}
+        />
+        <p className="text-base text-black">wait system ready</p>
+      </div>
+    );
   }
 
   return (

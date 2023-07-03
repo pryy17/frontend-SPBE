@@ -4,6 +4,8 @@ import imgBanner from "../../../assets/diskusi.jpeg";
 import { useRouter } from "next/router";
 import { getDetailApp } from "@/services/api";
 import Link from "next/link";
+import loading from "@/assets/loadinggif.gif";
+import Image from "next/image";
 
 export default function detailApp() {
   const router = useRouter();
@@ -28,7 +30,18 @@ export default function detailApp() {
 
   console.log(dataDetailApp);
   if (!dataDetailApp) {
-    return <div>loading...</div>;
+    return (
+      <div className="flex flex-col h-screen w-full justify-center items-center">
+        <Image
+          src={loading}
+          alt="loader"
+          height={100}
+          width={100}
+          quality={100}
+        />
+        <p className="text-base text-black">wait system ready</p>
+      </div>
+    );
   }
 
   return (
