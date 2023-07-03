@@ -2,7 +2,9 @@ import { useRouter } from "next/router";
 import { CardFlipper, Corousel, Footer, Navbar } from "@/components";
 import { getDetailDomain, getIndikatorData } from "../../../services/api";
 import React, { useEffect, useState } from "react";
+import loading from "@/assets/loadinggif.gif";
 import Aos from "aos";
+import Image from "next/image";
 
 export default function indikator() {
   const router = useRouter();
@@ -46,7 +48,12 @@ export default function indikator() {
     });
   }, []);
   if (!dataIndikator) {
-    return <div>loading...</div>;
+    return (
+      <div className="flex flex-col h-screen w-full justify-center items-center">
+        <Image src={loading} alt="loader" height={100} width={100} quality={100} />
+        <p className="text-base text-black">wait system ready</p>
+      </div>
+    );
   }
   return (
     <div className="bg-white">
