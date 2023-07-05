@@ -4,7 +4,7 @@ import { getWithoutHeader } from "./config";
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 // get data domain
 export const getInstrumentData = getWithoutHeader(
-  `${API_URL}/api/domains?populate=*`
+  `${API_URL}/api/domains?populate[0]=domain_image&populate[1]=aspeks`
 );
 
 export const getDetailDomain = (id) => {
