@@ -3,6 +3,9 @@ import { getSearchAppData, getSearchIndikatorData } from "@/services/api";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+import loading from "@/assets/loadinggif.gif";
+import Image from "next/image";
+
 
 export default function index() {
   const router = useRouter();
@@ -61,37 +64,50 @@ export default function index() {
         <div>
           <h2 className="text-3xl"># Indikator</h2>
           <p> {dataIndikator?.length} result</p>
-          {dataIndikator?.map((data) => (
-            <Link href={`/instrument/aspek/${data.id}`} key={data.id}>
-              <div className="mt-3 border-2 border-gray-400 p-4 rounded-md hover:bg-[#e1e2df] cursor-pointer active:bg-[#f5f8f0]">
-                <div>
+          {dataIndikator ? (
+            dataIndikator?.map((data) => (
+              <Link href={`/instrument/aspek/${data.id}`} key={data.id}>
+                <div className="mt-3 border-2 border-gray-400 p-4 rounded-md hover:bg-[#e1e2df] cursor-pointer active:bg-[#f5f8f0]">
                   <div>
-                    <strong>indikator {data.attributes.ind}</strong>
-                  </div>
-                  <div className="my-2">
-                    <strong>
-                      domain : {data.attributes.domain.data.attributes.name}
-                    </strong>
-                  </div>
-                  <div>
-                    <strong>
-                      aspek : {data.attributes.aspek.data.attributes.name}
-                    </strong>
-                  </div>
-                  <div className="my-4">
-                    <strong>Name</strong>
-                    <p>{data.attributes.title}</p>
-                  </div>
-                  <div>
-                    <strong>explanation</strong>
-                    <p className="whitespace-pre-line">
-                      {data.attributes.explanation_indicator}
-                    </p>
+                    <div>
+                      <strong>indikator {data.attributes.ind}</strong>
+                    </div>
+                    <div className="my-2">
+                      <strong>
+                        domain : {data.attributes.domain.data.attributes.name}
+                      </strong>
+                    </div>
+                    <div>
+                      <strong>
+                        aspek : {data.attributes.aspek.data.attributes.name}
+                      </strong>
+                    </div>
+                    <div className="my-4">
+                      <strong>Name</strong>
+                      <p>{data.attributes.title}</p>
+                    </div>
+                    <div>
+                      <strong>explanation</strong>
+                      <p className="whitespace-pre-line">
+                        {data.attributes.explanation_indicator}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))
+          ) : (
+            <div className="flex flex-col w-full">
+              <Image
+                src={loading}
+                alt="loader"
+                height={100}
+                width={100}
+                quality={100}
+              />
+              <p className="text-base text-black">wait system ready</p>
+            </div>
+          )}
 
           <h2 className="text-3xl mt-3"># application</h2>
           <p> {dataApp?.length} result</p>

@@ -61,7 +61,7 @@ export default function NavbarComp() {
       className={`${
         show
           ? "z-20 mb-5 transition duration-300 "
-          : "shadow-slate-800 shadow-lg fixed visible z-20 w-[85em] duration-300 transition-[0.5s]"
+          : "shadow-slate-800 shadow-lg fixed right-0 visible z-20 w-full sm:w-[100%] duration-300 transition-[0.5s]"
       }`}
     >
       <Navbar.Brand>

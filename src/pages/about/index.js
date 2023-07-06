@@ -3,7 +3,7 @@ import React from "react";
 
 export default function about() {
   return (
-    <div>
+    <div className="2xl:px-[17em]">
       <Navbar />
       <Tab />
       <div>

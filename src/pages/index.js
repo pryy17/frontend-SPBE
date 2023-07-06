@@ -7,7 +7,7 @@ export default function Home() {
     <main className="bg-white overflow-hidden">
       <Navbar />
       <Corousel data={img} className="bg-contain w-full h-full bg-no-repeat bg-center" />
-      <div className="mt-20 xl:flex grid grid-cols-1 justify-items-center w-full ">
+      <div className="mt-20 xl:flex justify-center grid grid-cols-1 justify-items-center w-full ">
         <iframe
           src="https://www.youtube.com/embed/-p32jFI00zw"
           title="YouTube video player"
@@ -25,7 +25,7 @@ export default function Home() {
         <h1 className="text-center mb-20 mt-20 text-2xl xl:text-5xl">
           Panduan Sistem Pemerintahan Berbasis Elektronik
         </h1>
-        <div className="grid grid-cols-1 xl:grid-cols-2 w-full justify-center justify-items-center gap-20">
+        <div className="grid grid-cols-1 xl:grid-cols-2 w-full md:px-[10em] justify-center justify-items-center gap-20">
           {dataMenu.map((item) => (
             <CardFlipper
               key={item.id}

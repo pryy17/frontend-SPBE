@@ -3,7 +3,7 @@ import React from "react";
 
 export default function ethics() {
   return (
-    <div>
+    <div className="2xl:px-[17em]">
       <Navbar />
       <div>
         <h1 className="text-center text-4xl font-bold mt-16">

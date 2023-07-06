@@ -21,13 +21,19 @@ export default function instrument() {
   if (!dataInstrument) {
     return (
       <div className="flex flex-col h-screen w-full justify-center items-center">
-        <Image src={loading} alt="loader" height={100} width={100} quality={100} />
+        <Image
+          src={loading}
+          alt="loader"
+          height={100}
+          width={100}
+          quality={100}
+        />
         <p className="text-base text-black">wait system ready</p>
       </div>
     );
   }
   return (
-    <div className="min-h-[100vh]">
+    <div className="min-h-[100vh] 2xl:px-[17em]">
       <Navbar />
       <br />
       <div className="container_instrument bg-white  py-10">
