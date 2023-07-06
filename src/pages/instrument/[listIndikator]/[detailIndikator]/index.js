@@ -55,7 +55,7 @@ export default function detailIndikator() {
   }
 
   return (
-    <div className="min-h-[100vh] flex-col">
+    <div className="min-h-[100vh] flex-col 2xl:px-[17em]">
       <Navbar />
       <div>
         <h1 className="text-4xl font-bold pb-9 border-b-4 border-b-slate-700 mb-4">

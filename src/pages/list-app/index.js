@@ -34,7 +34,7 @@ export default function listApp() {
   }
 
   return (
-    <div>
+    <div className="2xl:px-[17em]">
       <Navbar />
 
       <h1 className="text-4xl font-bold pb-9 border-b-4 border-b-slate-700 mb-4">

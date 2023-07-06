@@ -26,8 +26,8 @@ export default function Footer({ ...rest }) {
           </div>
           <div className="col-span-2">test</div>
         </div>
-        <div className="py-3 bg-black text-center">
-          <p className="text-white">© BrandName. All rights reserved.</p>
+        <div className="py-1 bg-black text-center">
+          <p className="text-white">© SPBE. All rights reserved.</p>
         </div>
       </footer>
     </div>

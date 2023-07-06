@@ -1,6 +1,8 @@
 import { DisclosureDown, Footer, Navbar } from "@/components";
 import { getProvisionData } from "@/services/api";
 import React, { useEffect, useState } from "react";
+import loading from "@/assets/loadinggif.gif";
+import Image from "next/image";
 
 export default function provision() {
   const [provisionData, setProvisionData] = useState();
@@ -14,8 +16,17 @@ export default function provision() {
       .catch((err) => [console.log(err)]);
   }, []);
 
+  if (!provisionData) {
+    return (
+      <div className="flex flex-col h-screen w-full justify-center items-center">
+        <Image src={loading} alt="loader" height={100} width={100} quality={100} />
+        <p className="text-base text-black">wait system ready</p>
+      </div>
+    );
+  }
+
   return (
-    <div>
+    <div className="2xl:px-[17em]">
       <Navbar />
       <div className="text-center pt-11">
         <h1 className="text-4xl font-bold">
