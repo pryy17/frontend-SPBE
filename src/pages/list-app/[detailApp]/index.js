@@ -48,7 +48,7 @@ export default function detailApp() {
     <div className="bg-white">
       <Navbar />
       <div>
-        <div className="relative mb-48">
+        <div className="relative sm:mb-48 mb-10">
           <div className="banner_app w-full h-[20em] overflow-hidden relative rounded-md">
             <img
               src={`${dataDetailApp?.banner}`}
@@ -56,12 +56,12 @@ export default function detailApp() {
               className=" absolute w-full  h-auto left-0"
             />
           </div>
-          <div className="absolute top-72 left-16 flex items-center">
+          <div className="absolute sm:top-72 sm:left-16 top-36 left-2 sm:flex items-center">
             <div
-              className=" z-20 logo_app w-48 h-48 overflow-hidden rounded-full shadow-lg shadow-slate-700 bg-cover bg-center"
+              className="z-20 logo_app h-28 w-28 sm:w-48 sm:h-48 overflow-hidden rounded-full shadow-lg shadow-slate-700 bg-cover bg-center"
               style={{ backgroundImage: `url(${dataDetailApp.logo})` }}
             ></div>
-            <div className="ms-7">
+            <div className="sm:ms-7">
               <h1 className="text-5xl font-bold font-['Poltawski Nowy']">
                 {dataDetailApp.name}
               </h1>
