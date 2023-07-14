@@ -38,10 +38,10 @@ export const getIndikatorLevelData = (id) => {
 };
 
 // get data apps
-export const getListApps = getWithoutHeader(`${API_URL}/api/applications`);
+export const getListApps = getWithoutHeader(`${API_URL}/api/applications?[populate]=*`);
 
 export const getDetailApp = (id) => {
-  const data = getWithoutHeader(`${API_URL}/api/applications/${id}`);
+  const data = getWithoutHeader(`${API_URL}/api/applications/${id}?[populate]=*`);
   return data();
 };
 

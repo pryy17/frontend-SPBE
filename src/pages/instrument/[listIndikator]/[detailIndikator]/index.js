@@ -7,6 +7,7 @@ import { getDetailIndikatorData, getIndikatorLevelData } from "@/services/api";
 import Level from "./level";
 import loading from "@/assets/loadinggif.gif";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function detailIndikator() {
   const router = useRouter();
@@ -103,7 +104,11 @@ export default function detailIndikator() {
           <DisclosureDown
             title={"Kaidah penilaian pemantauan dan evaluasi SPBE"}
           >
-            test
+            <Link href="/procedures/1" target="_blank">
+              <div className="from-[#efc9a1] hover:shadow-none to-green-300 bg-gradient-to-b py-1 px-4 w-fit rounded-full shadow-md shadow-slate-800 cursor-pointer">
+                <p className="text-lg font-semibold ">kaidah penulisan evaluasi</p>
+              </div>
+            </Link>
           </DisclosureDown>
         </div>
       </div>

@@ -18,5 +18,10 @@ export const data = [
         id: 4,
         name: "persiapan",
         src: "https://res.cloudinary.com/dsgz61dvy/image/upload/v1687835375/persiapan_evaluasi_c96461e4d6.png",
+    },
+    {
+        id: 5,
+        name: "pesebaran",
+        src: "https://res.cloudinary.com/dsgz61dvy/image/upload/v1689126385/sebaran_6aebc9b9f3.png",
     }
 ]

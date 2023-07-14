@@ -38,6 +38,7 @@ export default function detailApp() {
           height={100}
           width={100}
           quality={100}
+          priority
         />
         <p className="text-base text-black">wait system ready</p>
       </div>
@@ -51,7 +52,7 @@ export default function detailApp() {
         <div className="relative sm:mb-48 mb-10">
           <div className="banner_app w-full h-[20em] overflow-hidden relative rounded-md">
             <img
-              src={`${dataDetailApp?.banner}`}
+              src={`${dataDetailApp?.banner.data.attributes.url}`}
               alt="banner"
               className=" absolute w-full  h-auto left-0"
             />
@@ -59,7 +60,7 @@ export default function detailApp() {
           <div className="absolute sm:top-72 sm:left-16 top-36 left-2 sm:flex items-center">
             <div
               className="z-20 logo_app h-28 w-28 sm:w-48 sm:h-48 overflow-hidden rounded-full shadow-lg shadow-slate-700 bg-cover bg-center"
-              style={{ backgroundImage: `url(${dataDetailApp.logo})` }}
+              style={{ backgroundImage: `url(${dataDetailApp.logo.data.attributes.url})` }}
             ></div>
             <div className="sm:ms-7">
               <h1 className="text-5xl font-bold font-['Poltawski Nowy']">
@@ -76,11 +77,11 @@ export default function detailApp() {
           <div className="collaboration_app w-full pb-5">
             <h2 className="font-semibold text-xl text-center">kolaborasi</h2>
             <div className="w-full flex justify-center mt-9 ps-8">
-              {dataDetailApp?.collaboration.data.map((item, index) => (
+              {dataDetailApp?.collaborations.data.map((item) => (
                 <div
                   className="me-6 w-16 h-16 bg-center bg-cover"
-                  key={index}
-                  style={{ backgroundImage: `url(${item.img})` }}
+                  key={item.id}
+                  style={{ backgroundImage: `url(${item.attributes.url})` }}
                 />
               ))}
             </div>
@@ -89,13 +90,13 @@ export default function detailApp() {
           <div className="w-full h-2 pb-5">
             <h2 className="font-semibold text-xl text-center ">Pengguna</h2>
             <div className=" mt-9 ps-8  flex flex-wrap">
-              {dataDetailApp?.number_users.data.map((item, index) => (
+              {dataDetailApp?.user_number.map((item) => (
                 <div
                   className="me-6 bg-green-500 px-5 rounded-full w-fit mt-5"
-                  key={index}
+                  key={item.id}
                 >
                   <p className="text-white">
-                    {item.name} ({item.counts})
+                    {item.agency} ({item.amount})
                   </p>
                 </div>
               ))}

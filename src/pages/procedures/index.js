@@ -38,7 +38,7 @@ export default function procedures() {
         </h1>
         <div className=" w-full px-5 sm:w-1/3 flex justify-between mt-8">
           <Modal
-            title={"test"}
+            title={"eksternal"}
             button={
               <button className="bg-white shadow-lg shadow-black bg-gradient-to-r from-red-500 hover:bg-red-500 text-black font-semibold hover:text-white py-2 px-8 hover:border-transparent rounded-full">
                 <p className="text-lg tracking-wide">eksternal</p>
@@ -56,7 +56,7 @@ export default function procedures() {
             </div>
           </Modal>
           <Modal
-            title={"test2"}
+            title={"internal"}
             button={
               <button className="bg-red-400  bg-gradient-to-r from-white py-2 px-8 text-black font-semibold rounded-full shadow-lg shadow-black">
                 <p className="text-lg tracking-wide">internal</p>

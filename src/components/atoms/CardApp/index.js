@@ -4,6 +4,7 @@ import { HiChevronDoubleLeft } from "react-icons/hi";
 
 export default function CardAPP({ data }) {
   const url = process.env.NEXT_PUBLIC_API_URL;
+  console.log(data)
 
   return (
     <div className="mb-5">
@@ -17,11 +18,11 @@ export default function CardAPP({ data }) {
               <div className="text-left mt-3">
                 <p>Colaborasi</p>
                 <div className="w-full grid grid-cols-4 mt-2">
-                  {data?.attributes.collaboration.data.map((item, index) => (
+                  {data?.attributes.collaborations.data.map((item) => (
                     <div
-                      key={index}
+                      key={item.id}
                       className=" me-6 w-10 h-10 bg-center bg-cover"
-                      style={{ backgroundImage: `url(${item.img})` }}
+                      style={{ backgroundImage: `url(${item.attributes.url})` }}
                     />
                   ))}
                 </div>
