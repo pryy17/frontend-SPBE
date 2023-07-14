@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import loading from "@/assets/loadinggif.gif";
 import Image from "next/image";
-
+import town from "@/assets/town.gif"
 
 export default function index() {
   const router = useRouter();
@@ -51,15 +51,17 @@ export default function index() {
     <div>
       <Navbar />
       <div>
-        <h1 className="text-center text-6xl font-bold mb-12">
-          Halaman Pencarian Panduan SPBE
-        </h1>
-        <div className="mx-10 xl:mx-96">
-          <SearchBar
-            handleChange={handleChange}
-            handleSubmit={handleSubmit}
-            value={queryValue}
-          />
+        <div className="py-32 bg-[#e66e7e] relative mb-5" >
+          <h1 className="text-center text-6xl font-bold mb-12">
+            Halaman Pencarian Panduan SPBE
+          </h1>
+          <div className="mx-10 xl:mx-96">
+            <SearchBar
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
+              value={queryValue}
+            />
+          </div>
         </div>
         <div>
           <h2 className="text-3xl"># Indikator</h2>
