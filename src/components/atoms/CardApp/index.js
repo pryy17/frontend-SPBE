@@ -8,7 +8,7 @@ export default function CardAPP({ data }) {
 
   return (
     <div className="mb-5">
-      <Link href="/list-app/1">
+      <Link href={`/list-app/${data.id}`}>
         <div className="card_app border-2 max-w-[40em] sm:h-[15em] rounded-md grid grid-cols-12 shadow-md shadow-slate-950 overflow-hidden cursor-pointer hover:animate-pulse">
           <div className="desc_app col-span-12 sm:col-span-5 ps-5 ">
             <div className="text-left sm:mt-14">
@@ -34,7 +34,7 @@ export default function CardAPP({ data }) {
           </div>
           <div className="img_app sm:rotate-[20deg] col-span-12 sm:col-span-7 sm:w-[30em] h- sm:scale-125 sm:translate-x-10 sm:-translate-y-4  hover:rotate-0 hover:scale-100 hover:translate-x-0 transition hover:duration-[200ms]">
             <img
-              src={data?.attributes.banner}
+              src={data?.attributes.banner.data.attributes.url}
               alt="lapor"
               className="bg-cover bg-center"
               style={{ rotate: "initial" }}
