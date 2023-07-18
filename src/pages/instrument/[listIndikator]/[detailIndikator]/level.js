@@ -17,9 +17,9 @@ export default function ({ data }) {
           button={
             <button
               type="button"
-              className="mb-9 rounded-md w-56 h-56 from-[#02bb86] bg-gradient-to-br shadow-md shadow-slate-800 to-[#6d6262] px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+              className="mb-9 rounded-md w-56 h-56 from-[#eb3f5c] to-[#6b303a] bg-gradient-to-br shadow-md shadow-slate-800 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
             >
-              {item.title}
+              <p className="text-4xl uppercase font-bold">{item.title}</p>
             </button>
           }
         >
@@ -70,7 +70,9 @@ export default function ({ data }) {
                               className="px-8 py-1 me-5 sm:mt-0 mt-3 opacity-40 hover:opacity-100 from-slate-500 bg-gradient-to-r rounded-md shadow-md shadow-slate-400 to-[#f0d3d3]"
                               onClick={() => resetTransform()}
                             >
-                              <a href={item.attributes?.url} target="_blank">open</a>
+                              <a href={item.attributes?.url} target="_blank">
+                                open
+                              </a>
                             </button>
                           </div>
 

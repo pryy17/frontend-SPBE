@@ -84,7 +84,7 @@ export default function CardFlipper({
             ) : null}
 
             <div className=" w-full h-full flex justify-center items-center border-s-2 border-gray-500 me-2 sm:my-2">
-              <p className="text-black font-bold text-3xl ps-3 tracking-wide whitespace-pre-line leading-tight uppercase">
+              <p className="text-black text-3xl ps-3 tracking-wide whitespace-pre-line leading-tight uppercase">
                 {title}
               </p>
             </div>

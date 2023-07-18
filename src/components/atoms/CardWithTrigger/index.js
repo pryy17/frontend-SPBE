@@ -39,8 +39,8 @@ export default function CardWithTrigger({ domainTitle, aspeks, img, ...rest }) {
                 key={aspek.id}
                 data-aos="flip-down"
               >
-                <div className="from-[#F90B31] to-[#e79da8] bg-gradient-to-br shadow-md shadow-slate-800 border-none rounded-lg sm:min-h-[18em] flex justify-center text-center items-center font-semibold">
-                  <p className="whitespace-pre-line text-2xl text-white uppercase px-7 py-1 sm:py-0 sm:px-0">{aspek.attributes.name}</p>
+                <div className="bg-white border-2 border-gray-500 border-none rounded-lg sm:min-h-[18em] flex justify-center text-center items-center font-semibold">
+                  <p className="whitespace-pre-line text-xl text-black uppercase px-7 py-1 sm:py-0 sm:px-0">{aspek.attributes.name}</p>
                 </div>
               </Link>
             ))}

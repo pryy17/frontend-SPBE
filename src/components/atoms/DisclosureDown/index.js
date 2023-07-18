@@ -33,7 +33,7 @@ export default function DisclosureDown({ children, title }) {
             >
               <Disclosure.Panel
                 style={{ wordBreak: "break-all" }}
-                className="leading-loose z-auto bg-purple-100 overflow-auto px-4 py-6 rounded-b-lg text-left text-base font-medium  text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
+                className="leading-loose z-auto bg-white border-2 border-gray-200 overflow-auto px-4 py-6 rounded-b-lg text-left text-base font-medium  text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
               >
                 {children}
               </Disclosure.Panel>

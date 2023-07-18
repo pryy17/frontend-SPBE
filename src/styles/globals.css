@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Poltawski+Nowy&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poltawski+Nowy&display=swap');
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -27,4 +27,8 @@ body {
 li {
   list-style-type: circle;
   margin-left: 10px;
+}
+
+div {
+  font-family: 'Open Sans', sans-serif;
 }
