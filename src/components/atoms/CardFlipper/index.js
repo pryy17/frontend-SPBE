@@ -57,7 +57,7 @@ export default function CardFlipper({
               {data?.attributes.title}
             </strong>
             <Link href={`${asPath}/${data?.id}`}>
-              <button className="from-[#efc9a1] mt-3 hover:shadow-none to-green-300 bg-gradient-to-b py-1 px-4 w-fit rounded-full shadow-md shadow-slate-800 cursor-pointer">
+              <button className=" text-white from-[#DD0525] mt-3 hover:shadow-none to-[#e67182] bg-gradient-to-b py-1 px-4 w-fit rounded-full shadow-md shadow-slate-800 cursor-pointer">
                 GO
               </button>
             </Link>
@@ -98,7 +98,7 @@ export default function CardFlipper({
           >
             <div className="grid grid-cols-1 text-center">
               <Link href={path}>
-                <button className="from-[#efc9a1] text-5xl font-bold text-black mt-3 hover:shadow-none to-green-300 bg-gradient-to-b py-1 px-4 w-fit rounded-full shadow-md shadow-slate-800 cursor-pointer">
+                <button className="from-[#ffffff] text-5xl font-bold text-black mt-3 hover:shadow-none to-[#ffffff] bg-gradient-to-b py-1 px-4 w-fit rounded-full shadow-md shadow-slate-800 cursor-pointer">
                   GO
                 </button>
               </Link>
