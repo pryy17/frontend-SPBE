@@ -40,7 +40,7 @@ export default function Home() {
               path={item.path}
               title={item.name}
               img={item.img}
-              className={`bg-cover rounded-md bg-no-repeat bg-center h-[25em] sm:h-[15em] w-[20em] sm:w-[40em] justify-center items-center text-white flex rounded-md shadow-2xl shadow-slate-600`}
+              className={`bg-cover backdrop-blur-xl bg-no-repeat bg-center h-[25em] sm:h-[15em] w-[20em] sm:w-[40em] justify-center items-center text-white flex rounded-md shadow-2xl shadow-slate-600`}
             />
           ))}
         </div>

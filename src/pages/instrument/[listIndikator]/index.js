@@ -95,11 +95,13 @@ export default function indikator() {
             </div>
           </div>
 
-          <div className="gap_analysis flex flex-col-reverse sm:grid sm:grid-cols-12 sm:min-h-[30em] mt-0 sm:mt-11 px-6">
+          <div
+            className="gap_analysis flex flex-col-reverse sm:grid sm:grid-cols-12 sm:min-h-[30em] mt-0 sm:mt-11 px-6"
+            data-aos={"fade-right"}
+            data-aos-offset="600"
+          >
             <div
-              className="bg-contain bg-no-repeat col-span-7 w-full h-40 sm:h-auto"
-              data-aos={"fade-right"}
-              data-aos-offset="600"
+              className="bg-contain bg-no-repeat col-span-7 w-full h-40 sm:h-auto transition ease-in-out delay-75 hover:scale-125 hover:translate-x-36 hover:cursor-zoom-in"
               style={{
                 backgroundImage: `url(${dataDomain?.gap_analysis.data?.attributes.url})`,
               }}
@@ -109,13 +111,15 @@ export default function indikator() {
             </div>
           </div>
 
-          <div className="general_criteria grid grid-cols-12 sm:min-h-[30em] mt-11 px-6 sm:mb-0 mb-10">
+          <div
+            className="general_criteria grid grid-cols-12 sm:min-h-[30em] mt-11 px-6 sm:mb-0 mb-10"
+            data-aos={"fade-left"}
+          >
             <div className="sm:mb-0 mb-5 col-span-12 sm:col-span-5 whitespace-pre-line text-right text-4xl sm:text-5xl flex items-center ms-8 font-bold sm:pe-8">
               <h1>PEMENUHAN KRITERIA UMUM</h1>
             </div>
             <div
-              className="bg-contain bg-no-repeat h-40 sm:h-auto col-span-12 sm:col-span-7 w-full"
-              data-aos={"fade-left"}
+              className="bg-contain bg-no-repeat h-40 sm:h-auto col-span-12 sm:col-span-7 w-full transition ease-in-out delay-75 hover:scale-125 hover:-translate-x-36 hover:cursor-zoom-in"
               style={{
                 backgroundImage: `url(${dataDomain?.general_criteria.data?.attributes.url})`,
               }}
