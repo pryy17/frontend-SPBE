@@ -3,11 +3,10 @@ import React from "react";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 
 export default function levelDown({ data }) {
-  console.log(data);
   return (
     <div>
       <div>
-        {data.map((item) => (
+        {data?.map((item) => (
           <DisclosureDown title={item.title} key={item.id} opened={false}>
             <div className="mt-2">
               <div className="border-b-2 pb-5 mt-5">
