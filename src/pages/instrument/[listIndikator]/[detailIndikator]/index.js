@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { getDetailIndikatorData, getIndikatorLevelData } from "@/services/api";
 import Level from "./level";
+import LevelDown from "./levelDown";
 import loading from "@/assets/loadinggif.gif";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,8 +16,7 @@ export default function detailIndikator() {
   const [dataDetailIndikator, setDataDetailIndikator] = useState(null);
   const [dataLevel, setDataLevel] = useState(null);
   const [title, setTitle] = useState(null);
-
-  console.log(router);
+  const [levelMode, setLevelMode] = useState("modal");
   useEffect(() => {
     if (path.detailIndikator) {
       getDetailIndikatorData(path?.detailIndikator)
@@ -28,7 +28,6 @@ export default function detailIndikator() {
             getIndikatorLevelData(res.data.data.id)
               .then((res) => {
                 setDataLevel(res.data.data.attributes.level_component);
-                console.log(res.data.data.attributes.level_component);
               })
               .catch((err) => {
                 console.log(err);
@@ -76,7 +75,7 @@ export default function detailIndikator() {
           </p>
         </div>
         <div className="mt-7">
-          <DisclosureDown title={"PENJELASAN INDIKATOR"}>
+          <DisclosureDown title={"PENJELASAN INDIKATOR"} opened={true}>
             <div>
               <p className="mb-10">
                 {dataDetailIndikator.explanation_indicator}
@@ -89,24 +88,52 @@ export default function detailIndikator() {
               )}
             </div>
           </DisclosureDown>
-          <DisclosureDown title={"TUJUAN/MANFAAT KEBIJAKAN"}>
+          <DisclosureDown title={"TUJUAN/MANFAAT KEBIJAKAN"} opened={true}>
             {dataDetailIndikator.purpose}
           </DisclosureDown>
-          <DisclosureDown title={"RUANG LINKUP"}>
+          <DisclosureDown title={"RUANG LINKUP"} opened={true}>
             {dataDetailIndikator.scope}
           </DisclosureDown>
-          <DisclosureDown title={"REFERENSI"}>
+          <DisclosureDown title={"REFERENSI"} opened={true}>
             {dataDetailIndikator.reference}
           </DisclosureDown>
-          <DisclosureDown title={"LEVEL"}>
-            <Level data={dataLevel} />
+          <DisclosureDown title={"LEVEL"} opened={true}>
+            <div>
+              <div className="grid grid-cols-2 border-[1px] border-[#c9bcbc] w-fit ms-auto mb-5 rounded-md from-white to-slate-300 bg-gradient-to-b cursor-pointer text-black">
+                <p
+                  className={`px-3 text-center border-e-2 hover:bg-[#c9bcbc] ${
+                    levelMode == "modal" && "bg-[#ffffff]"
+                  } `}
+                  onClick={() => {
+                    setLevelMode("modal");
+                  }}
+                >
+                  Modal
+                </p>
+                <p
+                  className={`px-3 text-center hover:bg-[#c9bcbc] ${
+                    levelMode == "drop" && "bg-[#ffffff]"
+                  }`}
+                  onClick={() => {
+                    setLevelMode("drop");
+                  }}
+                >
+                  Drop
+                </p>
+              </div>
+              {levelMode == "modal" && <Level data={dataLevel} />}
+              {levelMode == "drop" && <LevelDown data={dataLevel} />}
+            </div>
           </DisclosureDown>
           <DisclosureDown
             title={"Kaidah penilaian pemantauan dan evaluasi SPBE"}
+            opened={true}
           >
             <Link href="/procedures/1" target="_blank">
               <div className="from-[#eb3f5c] hover:shadow-none bg-gradient-to-b py-1 px-4 w-fit rounded-full shadow-md shadow-slate-800 cursor-pointer">
-                <p className="text-lg text-black font-semibold ">kaidah penulisan evaluasi</p>
+                <p className="text-lg text-black font-semibold ">
+                  kaidah penulisan evaluasi
+                </p>
               </div>
             </Link>
           </DisclosureDown>

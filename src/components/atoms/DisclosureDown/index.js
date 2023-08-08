@@ -2,10 +2,10 @@ import { Disclosure, Transition } from "@headlessui/react";
 import React, { Fragment } from "react";
 import { HiChevronDown } from "react-icons/hi";
 
-export default function DisclosureDown({ children, title }) {
+export default function DisclosureDown({ children, title, opened }) {
   return (
     <div className="mt-4 whitespace-pre-line">
-      <Disclosure defaultOpen={true}>
+      <Disclosure defaultOpen={opened}>
         {({ open }) => (
           /* Use the `open` state to conditionally change the direction of an icon. */
           <>
@@ -33,7 +33,7 @@ export default function DisclosureDown({ children, title }) {
             >
               <Disclosure.Panel
                 style={{ wordBreak: "break-all" }}
-                className="leading-loose z-auto bg-white border-2 border-gray-200 overflow-auto px-4 py-6 rounded-b-lg text-left text-base font-medium  text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
+                className="leading-loose z-auto bg-white border-[#c9bcbc] border-[1px] overflow-auto px-4 py-6 rounded-b-lg text-left text-base font-medium  text-purple-900 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
               >
                 {children}
               </Disclosure.Panel>
