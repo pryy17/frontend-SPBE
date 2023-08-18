@@ -2,7 +2,7 @@ export const data = [
     {
         id: 1,
         name: "rapat",
-        src: "https://res.cloudinary.com/dsgz61dvy/image/upload/v1689648196/1_b38a0a435a.png",
+        src: "https://res.cloudinary.com/dsgz61dvy/image/upload/v1692343812/Selamat_datang_8d5686b2d3.png",
     },
     {
         id: 2,

@@ -18,6 +18,11 @@ export const getIndikatorData = (id) => {
   return data();
 };
 
+export const getAllIndikatorData = (id) => {
+  const data = getWithoutHeader(`${API_URL}/api/indikators?fields=ind`);
+  return data();
+};
+
 export const getDetailIndikatorData = (id) => {
   const data = getWithoutHeader(`${API_URL}/api/indikators/${id}?populate=*`);
   return data();

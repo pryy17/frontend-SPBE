@@ -1,6 +1,7 @@
 import { dataMenu } from "@/data/dataMenu";
 import { CardFlipper, Corousel, Footer, Navbar } from "../components";
 import { data as img } from "@/data/home/dataCorousel";
+import { data as indeksSpbe } from "@/data/home/dataIndeksnasional";
 
 export default function Home() {
   return (
@@ -13,8 +14,8 @@ export default function Home() {
       <div className="mt-20 xl:flex justify-center grid grid-cols-1 justify-items-center w-full ">
         <video
           width="440px"
-          loop="true"
-          autoplay="autoplay"
+          loop={true}
+          autoPlay="autoplay"
           className="aspect-video me-0 xl:me-16 w-full xl:w-[45em] h-[20em] xl:h-[27em]"
           muted
         >
@@ -25,7 +26,19 @@ export default function Home() {
         </video>
 
         <div className="mt-10 xl:mt-0 border-s-2 ps-3 xl:text-left border-slate-700 text-5xl xl:text-7xl w-fit font-bold">
-         EVALUASI <br /> SISTEM <br /> PEMERINTAHAN <br /> BERBASIS <br /> ELEKTRONIK
+          EVALUASI <br /> SISTEM <br /> PEMERINTAHAN <br /> BERBASIS <br />{" "}
+          ELEKTRONIK
+        </div>
+      </div>
+      <div className="from-[#9e7549af] to-[#C51605] bg-gradient-to-br rounded-lg md:w-[80%] mx-auto">
+        <h1 className="text-center mb-6 mt-20 text-2xl xl:text-5xl py-3 text-white shadow-md">
+          CAPAIAN INDEKS SPBE NASIONAL
+        </h1>
+        <div>
+          <Corousel
+            data={indeksSpbe}
+            className="bg-contain bg-center w-full h-full bg-no-repeat"
+          />
         </div>
       </div>
       <div>
