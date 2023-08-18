@@ -34,7 +34,7 @@ export default function levelDown({ data }) {
                       <TransformWrapper initialScale={1}>
                         {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
                           <React.Fragment>
-                            <div className="tools absolute z-30">
+                            <div className="tools relative z-30">
                               <button
                                 className="px-8 py-1 me-5 opacity-40 hover:opacity-100 from-slate-500 bg-gradient-to-r rounded-md shadow-md shadow-slate-400 to-[#f0d3d3]"
                                 onClick={() => zoomIn()}

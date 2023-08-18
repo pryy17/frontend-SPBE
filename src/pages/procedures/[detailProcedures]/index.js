@@ -1,5 +1,6 @@
 import { DisclosureDown, Footer, Navbar } from "@/components";
 import { getDetailProcedureData } from "@/services/api";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
@@ -115,6 +116,20 @@ export default function detailProcedures() {
               </div>
             </DisclosureDown>
           ))}
+        </div>
+        <div className="mt-10">
+          <h1 className="mb-5">REFERENSI</h1>
+          <ul>
+            {data?.reference.map((item) => (
+              <li key={item.id}>
+                <Link href={item.link} target="_blank">
+                  <p className="hover:text-blue-400" >{item.title}</p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <p></p>
         </div>
       </div>
       <Footer />

@@ -9,6 +9,7 @@ import LevelDown from "./levelDown";
 import loading from "@/assets/loadinggif.gif";
 import Image from "next/image";
 import Link from "next/link";
+import Sidebar from "./sidebar";
 
 export default function detailIndikator() {
   const router = useRouter();
@@ -57,6 +58,7 @@ export default function detailIndikator() {
   return (
     <div className="min-h-[100vh] flex-col 2xl:px-[17em]">
       <Navbar />
+      <Sidebar />
       <div>
         <h1 className="text-4xl font-bold pb-9 border-b-4 border-b-slate-700 mb-4">
           {dataDetailIndikator.title}
